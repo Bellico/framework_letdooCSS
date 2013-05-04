@@ -1,0 +1,144 @@
+/*RESET CSS*/
+html{color:#000;background:#FFF}
+body,table,form,h1,h2,h3,h4,h5,h6,p,ul{margin:0;padding: 0;font-family:inherit;font-size:100%;font-weight:normal}
+
+/**Global Tags*/
+p{text-align: justify;margin: 15px 0}
+h1,h2,h3,h4,h5,h6{margin: 15px 0}
+h1{font-size: 3em}h2{font-size: 2.5em}h3{font-size: 2em}h4{font-size: 1.8em}h5{font-size: 1.4em}h6{font-size: 1em}
+section{width: 100%;padding: 80px 0}
+a{text-decoration: none;color: inherit}
+
+/*Custom LDJ Tags*/
+.LDJ-header, .LDJ-footer{height: 530px;width: 100%}
+.LDJ-header.verticalCenter, .LDJ-footer.verticalCenter{padding: 100px 0;height: 330px}
+
+.LDJ-menu{width: 100%;height: 70px;box-shadow: 0px 3px 7px #000;z-index: 50}
+.LDJ-menu .logo{font-size: 2.5em;height: 100%;line-height: 70px;font-family: Titillium Web;float: left;width: 30%}
+.LDJ-menu nav{float: right;width: 70%;height: 100%}
+.LDJ-menu nav ul{list-style: none;font-family: Titillium Web;text-transform: uppercase;font-weight: bold;float: right}
+.LDJ-menu nav ul li {display: inline-block;padding: 0 25px;line-height: 70px;font-size: 0.9em}
+.LDJ-menu nav ul li a {display: block;width: 100%;height: 100%}
+.LDJ-menu nav ul li a:hover {text-decoration: underline}
+.LDJ-menu nav ul li.dropdown{cursor: pointer}
+.LDJ-menu nav ul li.dropdown:after{content: '>';display:inline-block;font-size: 1.2em; font-weight:bold;-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg)}
+.LDJ-menu nav ul li.dropdown:hover ul{display: block;height: 200px}
+.LDJ-menu nav ul li.dropdown ul{-webkit-transition: height 0.5s;-moz-transition: height 0.5s;-o-transition: height 0.5s;-ms-transition: height 0.5s;transition: height 0.5s}
+.LDJ-menu nav ul li.dropdown ul{display:none; position: absolute; height: 0px; width: 100%; left: 0; right: 0; top: 70px;cursor: default}
+.LDJ-menu nav ul li.dropdown ul li{height: 100%;line-height: 200px;margin-right: 30px;float: left}
+.LDJ-menu nav ul li.dropdown ul .label{font-size: 2.5em;font-style: italic;margin-left: 150px;margin-right: 150px;border: none}
+
+.LDJ-menu.top,.LDJ-menu.bottom{position: absolute;left: 0;z-index: 3}
+.LDJ-menu.left,.LDJ-menu.right{position: absolute;height: 100%;width: 60px;top:0;z-index: 3}
+.LDJ-menu.fixed{position: fixed}
+
+/*Texte*/
+.title{margin: auto;height: 120px;text-align: center;width: 100%;font-size: 8em;line-height: 120px;padding: 15px 0}
+.text{margin: 15px 0}
+.text.large{font-size: 5em}
+.text.center{text-align: center;margin: auto}
+
+
+/*Panel*/
+.slideLeft{display: none}
+.panel-slide{overflow: hidden;position: relative}
+.slideLeft{overflow: hidden}
+.panel-slide.slideLeft{display: block}
+.panel-slide .slideLeft{display: block; position: absolute; width: 300px; height: 100%; left: 0;z-index: 1}
+.panel-slide .panel{z-index: 2; position: relative; left: 300px}
+
+.panel-slide.off .panel{left: 0}
+.panel-slide.off .slideLeft{left: -300px}
+
+.panel-slide .panel{-webkit-transition: left 0.5s linear  ;-moz-transition: left 0.5s linear  ;-o-transition: left 0.5s linear  ;-ms-transition: left 0.5s linear  ;transition: left 0.5s linear  }
+.panel-slide .slideLeft{-webkit-transition: left 0.3s linear;-moz-transition: left 0.3s linear;-o-transition: left 0.3s linear;-ms-transition: left 0.3s linear;transition: left 0.3s linear}
+
+.panel-slide.off .slideLeft{-webkit-transition: left 0.5s linear  ;-moz-transition: left 0.5s linear  ;-o-transition: left 0.5s linear  ;-ms-transition: left 0.5s linear  ;transition: left 0.5s linear  }
+.panel-slide.off .panel{-webkit-transition: left 0.3s linear;-moz-transition: left 0.3s linear;-o-transition: left 0.3s linear;-ms-transition: left 0.3s linear;transition: left 0.3s linear}
+
+
+/*Section*/
+section.marg{margin: 20px auto;box-shadow: 0px 0px 15px #000}
+
+/*Block*/
+.container,.container-medium,.container-small{width: 1200px; margin: auto}
+.container-medium{width: 1000px}
+.container-small{width: 960px}
+.container,.container-medium,.container-small{-webkit-transition: width 0.5s;-moz-transition: width 0.5s;-o-transition: width 0.5s;-ms-transition: width 0.5s;transition: width 0.5s}
+
+
+
+
+/*Grid*/
+.row, .row-fluid {width: 100%; margin: 30px auto; display: table}
+.row .col{margin: 0 15px; display: inline-table}
+.row-fluid .col{margin: 0 1.5%; display: inline-table}
+
+.row .one    {width: 70px}
+.row .two    {width: 170px}
+.row .three  {width: 270px}
+.row .four   {width: 370px}
+.row .five   {width: 470px}
+.row .six    {width: 570px}
+.row .seven  {width: 670px}
+.row .height {width: 770px}
+.row .nine   {width: 870px}
+.row .ten 	 {width: 970px}
+.row .eleven {width: 1070px}
+.row .twelve {width: 1200px}
+
+
+.row-fluid .one    {width: 3.0833%}
+.row-fluid .two    {width: 13.6666%}
+.row-fluid .three  {width: 21.9999%}
+.row-fluid .four   {width: 30.3333%}
+.row-fluid .five   {width: 48.6666%}
+.row-fluid .six    {width: 46.9999%}
+.row-fluid .seven  {width: 55.3333%}
+.row-fluid .height {width: 63.6666%}
+.row-fluid .nine   {width: 71.9999%}
+.row-fluid .ten    {width: 80.3333%}
+.row-fluid .eleven {width: 88.3333%}
+.row-fluid .twelve {width: 100%}
+
+
+/*Block Position*/
+.top{top: 0}
+.left{left: 0}
+.right{right: 0}
+.bottom{bottom: 0}
+.relative{position: relative}
+.absolute{position: absolute}
+.fixed{position: fixed}
+.pullRight{float: right}
+.pullLeft{float: left}
+
+/*Color Theme - LetDoo*/
+.bg{background: rgba(70, 70, 70, 0.50)}
+.LDJ-header,.letdoo-theme .LDJ-footer{color:#FFF;background: #222222}
+.LDJ-menu{background:rgba(0, 0, 0, 0.70);color:#FFF}
+.LDJ-menu nav ul li.dropdown ul{background:rgba(0, 0, 0, 0.95)}
+section{background: #FFF}
+section.grey{background: #EDEDED}
+.panel-slide .slideLeft{background: #31363E;color: #FFF}
+
+/*Media Query*/
+@media only screen and (max-width: 1300px) and (min-width: 950px){
+	.container {width: 950px}
+	.container-medium{width: 750px}
+	.container-small{width: 450px}
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 725px){
+	.container {width: 725px}
+	.container-medium{width: 480px}
+	.container-small{width: 250px}
+}
+
+@media only screen and (max-width: 825px){
+	.container {width: 80%}
+	.container-medium{width: 70%}
+	.container-small{width: 60%}
+}
+
+
