@@ -1,0 +1,13 @@
+/*HEADER - FOOTER*/
+
+.LDJ-header, .LDJ-footer{
+	height: 530px;
+	width: 100%;
+	color:$headerFooter-Color;
+	background:$headerFooter-Background;
+}
+
+.LDJ-header.verticalCenter, .LDJ-footer.verticalCenter{
+	padding: 100px 0;
+	height: 330px;
+}

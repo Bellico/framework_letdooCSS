@@ -1,0 +1,36 @@
+/*VARIABLES*/
+
+//Globals Tags
+$font-family : Merriweather;
+
+/*Container*/
+$widthContainer : 1200px;
+
+/*Media Query*/
+$largeScreen : 1200px;
+$mediumScreen : 960px;
+$smallScreen : 760px;
+
+/*Grid*/
+$nbColumns : 12;
+$marginCol : 15px;
+$marginCol-Fluid : 1.5%;
+
+/*Header - Footer*/
+$headerFooter-Color :#FFF ;
+$headerFooter-Background : #222222;
+
+//Menu
+$z-indexMenu : 50;
+$heightMenu : 70px;
+$font-familyMenu : Titillium Web;
+$backgroundMenu : rgba(0, 0, 0, 0.70);
+$colorMenu : #FFF;
+$backgroundDropdown : rgba(0, 0, 0, 0.95);
+
+//Section
+$backgroundSection : #FFF;
+
+//Panel Slide
+$panelSlide-slideBackgound : #31363E;
+$panelSlide-slideColor : #FFF;

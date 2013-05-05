@@ -1,0 +1,34 @@
+/*PANEL SLIDE*/
+
+.slideLeft{
+	background: $panelSlide-slideBackgound ;
+	color: $panelSlide-slideColor;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	left: 0;
+	z-index: 1
+}
+
+.panel-slide{overflow: hidden;position: relative}
+.panel-slide > .panel{z-index: 2; position: relative; left: 300px}
+
+.panel-slide.off > .panel{left: 0}
+.panel-slide.off > .slideLeft{left: -300px}
+
+.panel-slide > .panel{
+	@include transition(left  0.5s linear)
+}
+.panel-slide > .slideLeft{
+	@include transition(left  0.3s linear)
+}
+
+.panel-slide.off > .slideLeft{
+	@include transition(left 0.5s linear)
+}
+
+.panel-slide.off > .panel{
+	@include transition(left 0.3s linear)
+}

@@ -1,0 +1,86 @@
+/*GRID*/
+
+@mixin setWidthColumn($widthContainer) {
+
+	$basesize : ($widthContainer + $marginCol ) / $nbColumns ;
+
+	.row{
+		.one      {width: ($basesize * 1) - $marginCol }
+		.two      {width: ($basesize * 2) - $marginCol }
+		.three    {width: ($basesize * 3) - $marginCol }
+		.four     {width: ($basesize * 4) - $marginCol }
+		.five     {width: ($basesize * 5) - $marginCol }
+		.six      {width: ($basesize * 6) - $marginCol }
+		.seven    {width: ($basesize * 7) - $marginCol }
+		.eight    {width: ($basesize * 8) - $marginCol }
+		.nine     {width: ($basesize * 9) - $marginCol }
+		.ten 	  {width: ($basesize * 10) - $marginCol }
+		.eleven   {width: ($basesize * 11) - $marginCol }
+		.twelve   {width: ($basesize * 12) - $marginCol }
+		.thirtenn {width: ($basesize * 13) - $marginCol }
+		.fourteen {width: ($basesize * 14) - $marginCol }
+		.fiveteen {width: ($basesize * 15) - $marginCol }
+		.sixteen  {width: ($basesize * 16) - $marginCol }
+	}
+
+}
+
+@mixin setWidthColumnFluid() {
+
+	$basesize : (100 + $marginCol-Fluid ) / $nbColumns ;
+
+	.row-fluid{
+		.one      {width: ($basesize * 1) - $marginCol-Fluid }
+		.two      {width: ($basesize * 2) - $marginCol-Fluid }
+		.three    {width: ($basesize * 3) - $marginCol-Fluid }
+		.four     {width: ($basesize * 4) - $marginCol-Fluid }
+		.five     {width: ($basesize * 5) - $marginCol-Fluid }
+		.six      {width: ($basesize * 6) - $marginCol-Fluid }
+		.seven    {width: ($basesize * 7) - $marginCol-Fluid }
+		.eight    {width: ($basesize * 8) - $marginCol-Fluid }
+		.nine     {width: ($basesize * 9) - $marginCol-Fluid }
+		.ten 	  {width: ($basesize * 10) - $marginCol-Fluid }
+		.eleven   {width: ($basesize * 11) - $marginCol-Fluid }
+		.twelve   {width: ($basesize * 12) - $marginCol-Fluid }
+		.thirtenn {width: ($basesize * 13) - $marginCol-Fluid }
+		.fourteen {width: ($basesize * 14) - $marginCol-Fluid }
+		.fiveteen {width: ($basesize * 15) - $marginCol-Fluid }
+		.sixteen  {width: ($basesize * 16) - $marginCol-Fluid }
+	}
+
+}
+
+.row, .row-fluid{
+	width: 100%;
+	margin: 30px auto;
+	display: table;
+}
+
+.row{
+
+	.col{
+		margin-left: $marginCol;
+		display: inline-table;
+	}
+
+	.col:first-child{
+		margin-left: 0
+	}
+
+}
+
+.row-fluid{
+
+	.col{
+		margin-left: $marginCol-Fluid;
+		display: inline-table;
+	}
+
+	.col:first-child{
+		margin-left: 0
+	}
+
+}
+
+@include setWidthColumn($widthContainer);
+@include setWidthColumnFluid();

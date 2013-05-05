@@ -1,18 +1,19 @@
-/*RESET CSS*/
+
+/*/*RESET CSS*//*
 html{color:#000;background:#FFF}
 body,table,form,h1,h2,h3,h4,h5,h6,p,ul{margin:0;padding: 0;font-family:inherit;font-size:100%;font-weight:normal}
 
-/**Global Tags*/
+/**Global Tags*//*
 p{text-align: justify;margin: 15px 0}
 h1,h2,h3,h4,h5,h6{margin: 15px 0}
 h1{font-size: 3em}h2{font-size: 2.5em}h3{font-size: 2em}h4{font-size: 1.8em}h5{font-size: 1.4em}h6{font-size: 1em}
 section{width: 100%;padding: 80px 0}
-a{text-decoration: none;color: inherit}
+a{text-decoration: none;color: inherit}*/
 
-/*Custom LDJ Tags*/
+/*Custom LDJ Tags*//*
 .LDJ-header, .LDJ-footer{height: 530px;width: 100%}
-.LDJ-header.verticalCenter, .LDJ-footer.verticalCenter{padding: 100px 0;height: 330px}
-
+.LDJ-header.verticalCenter, .LDJ-footer.verticalCenter{padding: 100px 0;height: 330px}*/
+/*
 .LDJ-menu{width: 100%;height: 70px;box-shadow: 0px 3px 7px #000;z-index: 50}
 .LDJ-menu .logo{font-size: 2.5em;height: 100%;line-height: 70px;font-family: Titillium Web;float: left;width: 30%}
 .LDJ-menu nav{float: right;width: 70%;height: 100%}
@@ -30,7 +31,7 @@ a{text-decoration: none;color: inherit}
 
 .LDJ-menu.top,.LDJ-menu.bottom{position: absolute;left: 0;z-index: 3}
 .LDJ-menu.left,.LDJ-menu.right{position: absolute;height: 100%;width: 60px;top:0;z-index: 3}
-.LDJ-menu.fixed{position: fixed}
+.LDJ-menu.fixed{position: fixed}*/
 
 /*Texte*/
 .title{margin: auto;height: 120px;text-align: center;width: 100%;font-size: 8em;line-height: 120px;padding: 15px 0}
@@ -57,19 +58,18 @@ a{text-decoration: none;color: inherit}
 .panel-slide.off .panel{-webkit-transition: left 0.3s linear;-moz-transition: left 0.3s linear;-o-transition: left 0.3s linear;-ms-transition: left 0.3s linear;transition: left 0.3s linear}
 
 
-/*Section*/
-section.marg{margin: 20px auto;box-shadow: 0px 0px 15px #000}
 
-/*Block*/
+
+/*Block*//*
 .container,.container-medium,.container-small{width: 1200px; margin: auto}
 .container-medium{width: 1000px}
 .container-small{width: 960px}
 .container,.container-medium,.container-small{-webkit-transition: width 0.5s;-moz-transition: width 0.5s;-o-transition: width 0.5s;-ms-transition: width 0.5s;transition: width 0.5s}
+*/
 
+/*
 
-
-
-/*Grid*/
+/*Grid*//**
 .row, .row-fluid {width: 100%; margin: 30px auto; display: table}
 .row .col{margin: 0 15px; display: inline-table}
 .row-fluid .col{margin: 0 1.5%; display: inline-table}
@@ -101,9 +101,9 @@ section.marg{margin: 20px auto;box-shadow: 0px 0px 15px #000}
 .row-fluid .eleven {width: 88.3333%}
 .row-fluid .twelve {width: 100%}
 
-
-/*Block Position*/
-.top{top: 0}
+*/
+/*Block Position*//*
+.top{top: 0}/*
 .left{left: 0}
 .right{right: 0}
 .bottom{bottom: 0}
@@ -111,15 +111,14 @@ section.marg{margin: 20px auto;box-shadow: 0px 0px 15px #000}
 .absolute{position: absolute}
 .fixed{position: fixed}
 .pullRight{float: right}
-.pullLeft{float: left}
-
-/*Color Theme - LetDoo*/
+.pullLeft{float: left}*/
+/*
+/*Color Theme - LetDoo*//*
 .bg{background: rgba(70, 70, 70, 0.50)}
-.LDJ-header,.letdoo-theme .LDJ-footer{color:#FFF;background: #222222}
+.LDJ-header,.letdoo-theme .LDJ-footer{color:#FFF;background: #222222}*//*
 .LDJ-menu{background:rgba(0, 0, 0, 0.70);color:#FFF}
-.LDJ-menu nav ul li.dropdown ul{background:rgba(0, 0, 0, 0.95)}
-section{background: #FFF}
-section.grey{background: #EDEDED}
+.LDJ-menu nav ul li.dropdown ul{background:rgba(0, 0, 0, 0.95)}*/
+
 .panel-slide .slideLeft{background: #31363E;color: #FFF}
 
 /*Media Query*/
