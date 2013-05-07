@@ -24,31 +24,6 @@
 
 @media only screen and (max-width: $mediumScreen) {
 
-	.menu{
-		display: none;
-	}
+	@include menu-responsive;
 
-	.menu{
-		overflow: hidden;
-		display: block;
-		width: 300px;
-		height: 100%;
-		left: -300px;
-		z-index: 1;
-		position: fixed;
-	}
-
-	body{
-		position: relative;
-		left: 300px;
-		z-index: 2;
-		overflow: hidden;
-		@include transition(left  0.3s linear);
-	}
-
-	body.off{
-		left: 0;
-		overflow: none;
-
-	}
 }

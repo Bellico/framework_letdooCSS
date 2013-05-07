@@ -1,7 +1,7 @@
 /*VARIABLES*/
 
 //Globals Tags
-$font-family : Merriweather;
+$font-family : Georgia, Helvetica, Arial, sans-serif;
 
 /*Container*/
 $widthContainer : 1200px;
@@ -17,16 +17,24 @@ $marginCol : 15px;
 $marginCol-Fluid : 1.5%;
 
 /*Header - Footer*/
-$headerFooter-Color :#FFF ;
-$headerFooter-Background : #222222;
+$colorHeader:#FFF ;
+$backgroundHeader : #03658C;
+$heightHeader : 800px;
+$paddingTopTitle: 200px;
+
+$colorFooter :#FFF ;
+$backgroundFooter : #0D111A;
+$heightFooter : 360px;
 
 //Menu
 $z-indexMenu : 50;
-$heightMenu : 70px;
-$font-familyMenu : Titillium Web;
-$backgroundMenu : rgba(0, 0, 0, 0.70);
+$heightMenu : 90px;
+$font-familyMenu : false;
+$backgroundMenu : #090C18;
 $colorMenu : #FFF;
-$backgroundDropdown : rgba(0, 0, 0, 0.95);
+$heightDropdown : 250px;
+$backgroundDropdown : false;
+$backgroundMenu-responsive : #2B2B2B;
 
 //Section
 $backgroundSection : #FFF;
@@ -34,3 +42,6 @@ $backgroundSection : #FFF;
 //Panel Slide
 $panelSlide-slideBackgound : #31363E;
 $panelSlide-slideColor : #FFF;
+
+
+// 03588C 03658C 038C8C 03A688 ADD9A0

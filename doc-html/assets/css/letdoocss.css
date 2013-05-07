@@ -57,7 +57,7 @@ body, table, form, h1, h2, h3, h4, h5, h6, p, ul {
 
 /*GLOBAL TAGS BASICS STYLES*/
 body {
-  font-family: Merriweather;
+  font-family: Georgia, Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -103,7 +103,6 @@ a {
 }
 
 section {
-  width: 100%;
   padding: 80px 0;
   background: white;
 }
@@ -251,114 +250,97 @@ section.dark {
 }
 
 /*HEADER - FOOTER*/
-.LDJ-header, .LDJ-footer {
-  height: 530px;
-  width: 100%;
+.header {
+  height: 800px;
   color: white;
-  background: #222222;
+  background: #03658c;
+}
+.header .title {
+  padding-top: 200px;
 }
 
-.LDJ-header.verticalCenter, .LDJ-footer.verticalCenter {
-  padding: 100px 0;
-  height: 330px;
+.footer {
+  height: 360px;
+  color: white;
+  background: #0d111a;
 }
 
 /*MENU*/
 .menu {
-  width: 100%;
-  height: 70px;
+  padding: 0 40px;
+  height: 90px;
   -webkit-box-shadow: 0px 3px 7px black;
   -moz-box-shadow: 0px 3px 7px black;
   box-shadow: 0px 3px 7px black;
   z-index: 50;
-  background: rgba(0, 0, 0, 0.7);
+  background: #090c18;
   color: white;
-}
-.menu.top, .menu.bottom {
-  position: absolute;
-  left: 0;
-  z-index: 3;
-}
-.menu.left, .menu.right {
-  position: absolute;
-  height: 100%;
-  width: 60px;
-  top: 0;
-  z-index: 3;
-}
-.menu.fixed {
-  position: fixed;
+  width: 100%;
 }
 .menu .logo {
   font-size: 2.5em;
   height: 100%;
-  line-height: 70px;
-  font-family: Titillium Web;
+  line-height: 90px;
   float: left;
-  width: 30%;
+  text-align: center;
 }
 .menu nav {
-  float: right;
-  width: 70%;
+  float: left;
   height: 100%;
 }
 .menu nav ul {
   list-style: none;
-  font-family: Titillium Web;
   text-transform: uppercase;
   font-weight: bold;
-  float: right;
+  margin-left: 30px;
 }
 .menu nav ul li {
   display: inline-block;
-  padding: 0 25px;
-  line-height: 70px;
+  padding: 0 10px;
+  line-height: 90px;
   font-size: 0.9em;
 }
 .menu nav ul li a {
   display: block;
-  width: 100%;
-  height: 100%;
 }
-.menu nav ul li a:hover {
-  text-decoration: underline;
-}
-.menu nav ul li.dropdown {
+.menu nav li.dropdown {
   cursor: pointer;
 }
-.menu nav ul li.dropdown:hover ul {
+.menu nav li.dropdown:hover > ul {
   display: block;
 }
-.menu nav ul li.dropdown ul {
+.menu nav li.dropdown a:hover {
+  text-decoration: underline;
+}
+.menu nav li.dropdown ul {
   display: none;
   position: absolute;
-  height: 200px;
+  height: 250px;
   width: 100%;
-  left: 0;
-  right: 0;
-  top: 70px;
+  left: -40px;
+  padding: 0 40px;
   cursor: default;
-  background: rgba(0, 0, 0, 0.95);
+  top: 90px;
+  background: rgba(9, 12, 24, 0.8);
   -webkit-animation: menuAnim 0.3s;
   -moz-animation: menuAnim 0.3s;
   -ms-animation: menuAnim 0.3s;
   -o-animation: menuAnim 0.3s;
   animation: menuAnim 0.3s;
 }
-.menu nav ul li.dropdown ul li {
-  height: 100%;
-  line-height: 200px;
+.menu nav li.dropdown ul li {
+  line-height: 250px;
   margin-right: 30px;
   float: left;
+  padding: 0 20px;
 }
-.menu nav ul li.dropdown ul .label {
-  font-size: 2.5em;
+.menu nav li.dropdown ul .label {
+  font-size: 2em;
   font-style: italic;
-  margin-left: 150px;
-  margin-right: 150px;
-  border: none;
+  margin-right: 30px;
+  padding: 0;
 }
-.menu nav ul li.dropdown:after {
+.menu nav li.dropdown:after {
   content: '>';
   display: inline-block;
   font-size: 1.2em;
@@ -368,6 +350,10 @@ section.dark {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.menu nav > ul > li:hover {
+  border-bottom: 4px solid #981446;
+  height: 86px;
 }
 
 @-moz-keyframes menuAnim {
@@ -440,6 +426,21 @@ section.dark {
 .text.center {
   text-align: center;
   margin: auto;
+}
+
+.ico-nav-bar {
+  height: 25px;
+  width: 28px;
+  background: #000;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+.ico-nav-bar .navBar {
+  height: 3px;
+  margin: 4px 0;
+  width: 28px;
+  background: #FFF;
+  border-radius: 3px;
 }
 
 /*PANEL SLIDE*/
@@ -623,33 +624,65 @@ section.dark {
   }
 }
 @media only screen and (max-width: 960px) {
-  .menu {
-    display: none;
-  }
-
-  .menu {
+  .menu.responsive {
     overflow: hidden;
-    display: block;
+    padding: 0;
     width: 300px;
     height: 100%;
-    left: -300px;
-    z-index: 1;
+    left: 0;
     position: fixed;
+    z-index: 1;
+    background: #2b2b2b;
+  }
+  .menu.responsive .logo {
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    float: none;
+  }
+  .menu.responsive nav {
+    float: none;
+  }
+  .menu.responsive nav ul {
+    margin: 0;
+  }
+  .menu.responsive nav ul li {
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    padding: 0 20px;
+    position: relative;
+  }
+  .menu.responsive nav li.dropdown ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+  .menu.responsive nav li.dropdown ul li {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+  }
+  .menu.responsive nav li.dropdown ul .label {
+    display: none;
+  }
+  .menu.responsive nav > ul > li:hover {
+    border: 0;
+    border-left: 5px solid red;
+    background: #121212;
   }
 
-  body {
-    position: relative;
-    left: 300px;
+  #bodyContent {
     z-index: 2;
-    overflow: hidden;
+    position: relative;
     -webkit-transition: left 0.3s linear;
     -moz-transition: left 0.3s linear;
     -o-transition: left 0.3s linear;
     transition: left 0.3s linear;
+    box-shadow: -3px 0px 5px #000;
   }
-
-  body.off {
-    left: 0;
-    overflow: none;
+  #bodyContent.sliding {
+    left: 300px;
   }
 }
