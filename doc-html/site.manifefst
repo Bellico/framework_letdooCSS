@@ -1,0 +1,13 @@
+#CACHE MANIFEST
+
+# Version 0.12
+
+#CACHE:
+#index.html
+#assets/css/letdoocss.css
+
+#FALLBACK:
+#offline.html
+
+#NETWORK:
+*

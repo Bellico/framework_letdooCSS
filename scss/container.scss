@@ -3,5 +3,5 @@
 .container{
 	width: $widthContainer;
 	margin: auto;
-	@include transition (width,0.5s);
+	@include transition (width 0.5s);
 }

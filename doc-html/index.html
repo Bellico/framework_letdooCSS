@@ -4,14 +4,22 @@
 	<title>LetDooJs</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link type="text/css" rel="stylesheet" href="assets/css/letdoocss.css">
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
 
 <body>
 
 
-			<div class="menu fixed responsive">
-					<div class="logo">LetDooJS</div>
+
+
+	<div id="bodyContent" class="siding">
+
+
+
+			<header class="header ">
+
+				<div class="menu fixed responsive">
+					<div class="logo">LetDooCSS</div>
 					<nav class="nav">
 						<ul>
 							<li class="dropdown">Accueil
@@ -19,20 +27,49 @@
 								<li class="label">Accueil</li>
 								<li>Biebien</li>
 								<li><a href="">Bokok</a></li>
+								<li>okk</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
 							</ul>
 							</li>
+								<li><a href="">BOU</a></li>
+								<li class="dropdown">Accueil
+							<ul>
+								<li class="label">Accueil</li>
 								<li>Biebien</li>
+								<li><a href="">Bokok</a></li>
+								<li>okk</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+							</ul>
+								<li><a href="">BOU</a></li>
+								<li class="dropdown">Accueil
+							<ul>
+								<li class="label">Accueil</li>
+								<li>Biebien</li>
+								<li><a href="">Bokok</a></li>
+								<li>okk</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+								<li>okkok</li>
+							</ul>
+								<li><a href="">BOU</a></li>
+								<li><a href="">BOU</a></li>
 						</ul>
 					</nav>
 
 			</div>
-
-	<div id="bodyContent" class="sliding">
-
-
-
-			<header class="header ">
-
 
 				<div class="container">
 						<div class="ico-nav-bar"><div class="navBar"></div><div class="navBar"></div><div class="navBar"></div></div>
@@ -44,6 +81,7 @@
 			<section class="">
 				<div class="container bg">
 					<h2>Coucou</h2>
+					<ul><li>dddd</li><li>sddd <ul><li>okok</li> <li>ijjij</li></ul></li><li>okok</li></ul>
 				</div>
 			</section>
 
@@ -78,6 +116,43 @@
 
 			<footer class="footer"> footer</footer>
 	</div>
+
+<script>
+	var down =0 ;
+
+/*	document.addEventListener('mousedown',function(e){
+		//console.log(e.clientX);
+	//	e.preventDefault();
+		down = e.clientX;
+
+	},false)
+
+		document.addEventListener('mouseup',function(e){
+			e.preventDefault();
+		var up = e.clientX
+
+		if(up - down > 200 ) {
+			var a =document.querySelector("#bodyContent");
+			a.setAttribute('class','sliding');
+		}
+
+
+	},false)
+*/
+var ok = false;
+var a =document.querySelector(".ico-nav-bar");
+a.addEventListener('click',function(e){
+var a =document.querySelector("#bodyContent");
+			if(!ok)
+			{
+				ok = true;
+			a.setAttribute('class','sliding');
+		}
+			else{ok = false; a.removeAttribute('class');}
+
+	},false)
+</script>
+
 
 </body>
 
