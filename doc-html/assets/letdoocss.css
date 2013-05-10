@@ -1,5 +1,6 @@
 /*VARIABLES*/
 /*Container*/
+/*mainBox*/
 /*Media Query*/
 /*Grid*/
 /*Header - Footer*/
@@ -15,6 +16,17 @@ body, table, form, h1, h2, h3, h4, h5, h6, p, ul {
   font-family: inherit;
   font-size: 100%;
   font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 /*MIXINS*/
@@ -59,6 +71,12 @@ body, table, form, h1, h2, h3, h4, h5, h6, p, ul {
 body {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background: white;
+}
+
+#mainBox {
+  z-index: 2;
+  position: relative;
 }
 
 p {
@@ -117,7 +135,6 @@ section.dark {
   background: #ededed;
 }
 
-/*CONTAINER*/
 .container {
   width: 1200px;
   margin: auto;
@@ -125,6 +142,14 @@ section.dark {
   -moz-transition: width 0.5s;
   -o-transition: width 0.5s;
   transition: width 0.5s;
+}
+
+.btn {
+  background: #424242;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #FFF;
 }
 
 /*GRID*/
@@ -269,7 +294,7 @@ section.dark {
   padding: 0 40px;
   height: 90px;
   box-shadow: 0px 3px 7px #000;
-  z-index: 50;
+  z-index: 5;
   background: #090c18;
   color: white;
   width: 100%;
@@ -286,7 +311,6 @@ section.dark {
   height: 100%;
 }
 .menu nav ul {
-  list-style: none;
   text-transform: uppercase;
   font-weight: bold;
   margin-left: 30px;
@@ -324,6 +348,7 @@ section.dark {
   -ms-animation: menuAnim 0.3s;
   -o-animation: menuAnim 0.3s;
   animation: menuAnim 0.3s;
+  overflow: hidden;
 }
 .menu nav li.dropdown ul li {
   line-height: 150px;
@@ -629,6 +654,7 @@ section.dark {
     left: -300px;
     position: absolute;
     background: #2b2b2b;
+    z-index: 7;
   }
   .menu.responsive .logo {
     height: 100px;
@@ -692,16 +718,145 @@ section.dark {
     background: #121212;
   }
 
-  #bodyContent {
-    z-index: 2;
-    position: relative;
+  #mainBox {
     -webkit-transition: left 0.3s linear;
     -moz-transition: left 0.3s linear;
     -o-transition: left 0.3s linear;
     transition: left 0.3s linear;
     box-shadow: -3px 0px 5px #000;
   }
-  #bodyContent.sliding {
+  #mainBox.sliding {
     left: 300px;
+  }
+}
+/*BAR-SIDE*/
+#mainBox.padLeft {
+  padding-left: 90px;
+}
+
+.bar-side {
+  width: 90px;
+  height: 100%;
+  position: absolute;
+  background: #525252;
+  margin-left: -90px;
+  z-index: 6;
+  box-shadow: 5px 0 10px #000;
+}
+.bar-side nav {
+  width: 90px;
+}
+.bar-side nav li:first-child {
+  height: 90px;
+}
+.bar-side nav li {
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  border-bottom: 1px solid #030303;
+  color: white;
+  text-shadow: 0 2px 2px #000;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.bar-side nav li ul {
+  display: none;
+  width: 250px;
+  background: #292929;
+  position: absolute;
+  left: 90px;
+  top: 0;
+  box-shadow: 5px 0 10px #000;
+  height: 100%;
+  -webkit-animation: barSideAnim 0.3s;
+  -moz-animation: barSideAnim 0.3s;
+  -ms-animation: barSideAnim 0.3s;
+  -o-animation: barSideAnim 0.3s;
+  animation: barSideAnim 0.3s;
+  cursor: default;
+}
+.bar-side nav li ul li {
+  height: 46.5px;
+  line-height: 45px;
+  border-bottom: 1px solid #4f4f4f;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 1.2em;
+}
+.bar-side nav li ul .label {
+  height: 90px;
+  line-height: 90px;
+  background: #1c1c1c;
+  font-size: 1.8em;
+  border-top: none;
+  text-align: left;
+}
+.bar-side nav li ul li:hover {
+  background: #1c1c1c;
+}
+.bar-side nav li:hover {
+  background: #393939;
+}
+.bar-side nav li:hover ul {
+  display: block;
+}
+
+@-moz-keyframes barSideAnim {
+  0% {
+    left: -255px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes barSideAnim {
+  0% {
+    left: -255px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes barSideAnim {
+  0% {
+    left: -255px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes barSideAnim {
+  0% {
+    left: -255px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@keyframes barSideAnim {
+  0% {
+    left: -255px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 90px;
+    opacity: 1;
   }
 }

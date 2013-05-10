@@ -1,5 +1,5 @@
 http_path="/"
-css_dir="doc-html/assets/css/"
+css_dir="doc-html/assets/"
 sass_dir="scss/"
 images_dir="doc-html/assets/img/"
 line_comments=false

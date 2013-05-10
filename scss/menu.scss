@@ -22,7 +22,6 @@
 		height: 100%;
 
 		ul{
-			list-style: none;
 			text-transform: uppercase;
 			font-weight: bold;
 			margin-left: 30px;
@@ -60,6 +59,7 @@
 				top: $heightMenu;
 				background:rgba($backgroundMenu, 0.8);
 				@include animation(menuAnim 0.3s);
+				overflow: hidden;
 
 				li{
 					line-height: $heightDropdown;
@@ -114,6 +114,7 @@
 		left: -300px;
 		position: absolute;
 		background: $backgroundMenu-responsive;
+		z-index: $z-indexMenu + 2;
 
 		.logo{
 			height: 100px;
@@ -188,9 +189,7 @@
 
 	}
 
-	#bodyContent{
-		z-index: 2;
-		position: relative;
+	#mainBox{
 		@include transition(left  0.3s linear);
 		box-shadow: -3px 0px 5px #000;
 

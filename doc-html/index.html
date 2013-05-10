@@ -3,17 +3,54 @@
 <head>
 	<title>LetDooJs</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link type="text/css" rel="stylesheet" href="assets/css/letdoocss.css">
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link type="text/css" rel="stylesheet" href="assets/letdoocss.css">
+	<script type="text/javascript" src="assets/letdoocss.js"></script>
 </head>
 
 <body>
 
 
 
+	<div id="mainBox" class="padLeft">
 
-	<div id="bodyContent" class="siding">
-
+<div class="bar-side fixed"><nav><ul>
+	<li>YpYPTYP
+	<ul>
+		<li class="label">Inputs</li>
+		<li>All Inputs</li>
+		<li><a href="">ok</a></li>
+		<li>ok</li>
+	</ul>
+	<li>YpYPTYP
+	<ul>
+		<li class="label">Inputs</li>
+		<li>All Inputs</li>
+		<li><a href="">ok</a></li>
+		<li>ok</li>
+	</ul>
+	</li>
+	<li>YpYPTYP
+	<ul>
+		<li class="label">Inputs</li>
+		<li>All Inputs</li>
+		<li><a href="">ok</a></li>
+		<li>ok</li>
+	</ul>
+	<li>YpYPTYP
+	<ul>
+		<li class="label">Inputs</li>
+		<li>All Inputs</li>
+		<li><a href="">ok</a></li>
+		<li>ok</li>
+	</ul>
+	<li>YpYPTYP
+	<ul>
+		<li class="label">Inputs</li>
+		<li>All Inputs</li>
+		<li><a href="">ok</a></li>
+		<li>ok</li>
+	</ul>
+</ul></nav></div>
 
 
 			<header class="header ">
@@ -88,6 +125,9 @@
 			<section class="dark">
 				<div class="container bg">
 
+					<button class="btn">OK ! </button>
+					<button class="btn">Comment Ca va ?</button>
+					<button class="btn">Bien bien pas trop mal lol , bon a + !! </button>
 
 				</div>
 			</section>
@@ -142,13 +182,13 @@
 var ok = false;
 var a =document.querySelector(".ico-nav-bar");
 a.addEventListener('click',function(e){
-var a =document.querySelector("#bodyContent");
+var a =document.querySelector("#mainBox");
 			if(!ok)
 			{
 				ok = true;
-			a.setAttribute('class','sliding');
+			a.setAttribute('class','sliding padLeft');
 		}
-			else{ok = false; a.removeAttribute('class');}
+			else{ok = false;a.setAttribute('class','padLeft');}
 
 	},false)
 </script>

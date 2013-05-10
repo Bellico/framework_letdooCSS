@@ -2,9 +2,13 @@
 
 //Globals Tags
 $font-family : Georgia, Helvetica, Arial, sans-serif;
+$backgroundBody : #FFF;
 
 /*Container*/
 $widthContainer : 1200px;
+
+/*mainBox*/
+$z-indexMainBox : 2;
 
 /*Media Query*/
 $largeScreen : 1200px;
@@ -27,7 +31,7 @@ $backgroundFooter : #0D111A;
 $heightFooter : 360px;
 
 //Menu
-$z-indexMenu : 50;
+$z-indexMenu : 5;
 $heightMenu : 90px;
 $font-familyMenu : false;
 $backgroundMenu : #090C18;
@@ -43,5 +47,11 @@ $backgroundSection : #FFF;
 $panelSlide-slideBackgound : #31363E;
 $panelSlide-slideColor : #FFF;
 
+//Bar-Side
+$widthBar-Side : 90px;
+$backgroundBar-Side : #525252;
+$backgroundSecondBar : #292929;
+$widthSecondBar : 250px;
+$colorBar-side : #FFF;
 
 // 03588C 03658C 038C8C 03A688 ADD9A0

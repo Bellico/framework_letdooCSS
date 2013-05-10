@@ -1,1 +1,1 @@
-compass watch
+compass watch scss/letdoocss.scss
