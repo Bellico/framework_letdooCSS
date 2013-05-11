@@ -2,7 +2,7 @@
 
 #mainBox.padLeft{padding-left: $widthBar-Side;}
 
-.bar-side{
+.side-bar{
 
 	width: $widthBar-Side;
 	height: 100%;
@@ -10,7 +10,7 @@
 	background: $backgroundBar-Side;
 	margin-left: - $widthBar-Side;
 	z-index: $z-indexMenu + 1;
-	box-shadow: 5px 0 10px #000;
+	box-shadow: 2px 0 5px #000;
 
 	nav{
 		width: $widthBar-Side;
@@ -36,9 +36,9 @@
 				position: absolute;
 				left: $widthBar-Side;
 				top: 0;
-				box-shadow: 5px 0 10px #000;
+				box-shadow: 2px 0 10px #000;
 				height: 100%;
-				@include animation(barSideAnim 0.3s);
+				@include animation(barSideAnim 0.5s);
 				cursor: default;
 
 

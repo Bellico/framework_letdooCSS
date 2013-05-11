@@ -13,7 +13,7 @@
 
 	<div id="mainBox" class="padLeft">
 
-<div class="bar-side fixed"><nav><ul>
+<div class="side-bar fixed"><nav><ul>
 	<li>YpYPTYP
 	<ul>
 		<li class="label">Inputs</li>
@@ -116,19 +116,39 @@
 			</header>
 
 			<section class="">
-				<div class="container bg">
-					<h2>Coucou</h2>
-					<ul><li>dddd</li><li>sddd <ul><li>okok</li> <li>ijjij</li></ul></li><li>okok</li></ul>
+				<div class="container">
+					 <form>
+		                <fieldset>
+		                    <legend>Vos coordonnées</legend>
+		                    <input type="text" name="prenom" id="prenom" required /> <br />
+		                    <input type="email" /> <br />
+		                    <input type="url" /> <br />
+		                    <input type="tel" /> <br />
+		                    <input type="number" min="0" max="99" step="1" /> <br />
+		                    <input type="range" /> <br />
+		                    <input type="color" /> <br />
+		                    <input type="date" /> <br />
+		                    <input type="month" /> <br />
+		                    <input type="week" /> <br />
+		                    <input type="search" /> <br />
+		                </fieldset>
+		                    <input type="submit" value="Envoyer" />
+		                    <input type="image" value="Envoyer" />
+
+		            </form>
 				</div>
 			</section>
 
 			<section class="dark">
 				<div class="container bg">
-
+					Comment Ca va
 					<button class="btn">OK ! </button>
+					Comment Ca va
 					<button class="btn">Comment Ca va ?</button>
+					Comment Ca va
 					<button class="btn">Bien bien pas trop mal lol , bon a + !! </button>
-
+					<a href="" class="btn">Valider</a>
+				<a class="link" href="">Validet ma sauvegarde</a>
 				</div>
 			</section>
 
@@ -191,6 +211,7 @@ var a =document.querySelector("#mainBox");
 			else{ok = false;a.setAttribute('class','padLeft');}
 
 	},false)
+
 </script>
 
 

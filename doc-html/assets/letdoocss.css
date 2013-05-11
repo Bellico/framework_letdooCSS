@@ -1,4 +1,5 @@
 /*VARIABLES*/
+/*Button*/
 /*Container*/
 /*mainBox*/
 /*Media Query*/
@@ -27,6 +28,7 @@ button {
   padding: 0;
   border: none;
   background: none;
+  font: inherit;
 }
 
 /*MIXINS*/
@@ -145,11 +147,38 @@ section.dark {
 }
 
 .btn {
-  background: #424242;
+  background: #222222;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #222222), color-stop(100%, #3c3c3c));
+  background-image: -webkit-linear-gradient(bottom, #222222, #3c3c3c);
+  background-image: -moz-linear-gradient(bottom, #222222, #3c3c3c);
+  background-image: -o-linear-gradient(bottom, #222222, #3c3c3c);
+  background-image: linear-gradient(bottom, #222222, #3c3c3c);
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #000;
   color: #FFF;
+  box-shadow: 0px 2px 2px #000 , 0px 3px 5px #555;
+  margin: 5px 5px 7px 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #151515;
+}
+
+.btn:active {
+  box-shadow: 0px 1px 2px #000;
+  position: relative;
+  top: 2px;
+}
+
+.link {
+  color: #005CFF;
+}
+
+.link:hover {
+  color: #004acc;
+  text-decoration: underline;
 }
 
 /*GRID*/
@@ -293,11 +322,13 @@ section.dark {
 .menu {
   padding: 0 40px;
   height: 90px;
-  box-shadow: 0px 3px 7px #000;
   z-index: 5;
   background: #090c18;
   color: white;
   width: 100%;
+}
+.menu.fixed {
+  box-shadow: 0px 2px 5px #000;
 }
 .menu .logo {
   font-size: 2.5em;
@@ -734,22 +765,22 @@ section.dark {
   padding-left: 90px;
 }
 
-.bar-side {
+.side-bar {
   width: 90px;
   height: 100%;
   position: absolute;
   background: #525252;
   margin-left: -90px;
   z-index: 6;
-  box-shadow: 5px 0 10px #000;
+  box-shadow: 2px 0 5px #000;
 }
-.bar-side nav {
+.side-bar nav {
   width: 90px;
 }
-.bar-side nav li:first-child {
+.side-bar nav li:first-child {
   height: 90px;
 }
-.bar-side nav li {
+.side-bar nav li {
   height: 95px;
   line-height: 95px;
   text-align: center;
@@ -759,23 +790,23 @@ section.dark {
   cursor: pointer;
   font-size: 0.8em;
 }
-.bar-side nav li ul {
+.side-bar nav li ul {
   display: none;
   width: 250px;
   background: #292929;
   position: absolute;
   left: 90px;
   top: 0;
-  box-shadow: 5px 0 10px #000;
+  box-shadow: 2px 0 10px #000;
   height: 100%;
-  -webkit-animation: barSideAnim 0.3s;
-  -moz-animation: barSideAnim 0.3s;
-  -ms-animation: barSideAnim 0.3s;
-  -o-animation: barSideAnim 0.3s;
-  animation: barSideAnim 0.3s;
+  -webkit-animation: barSideAnim 0.5s;
+  -moz-animation: barSideAnim 0.5s;
+  -ms-animation: barSideAnim 0.5s;
+  -o-animation: barSideAnim 0.5s;
+  animation: barSideAnim 0.5s;
   cursor: default;
 }
-.bar-side nav li ul li {
+.side-bar nav li ul li {
   height: 46.5px;
   line-height: 45px;
   border-bottom: 1px solid #4f4f4f;
@@ -783,7 +814,7 @@ section.dark {
   text-align: left;
   font-size: 1.2em;
 }
-.bar-side nav li ul .label {
+.side-bar nav li ul .label {
   height: 90px;
   line-height: 90px;
   background: #1c1c1c;
@@ -791,13 +822,13 @@ section.dark {
   border-top: none;
   text-align: left;
 }
-.bar-side nav li ul li:hover {
+.side-bar nav li ul li:hover {
   background: #1c1c1c;
 }
-.bar-side nav li:hover {
+.side-bar nav li:hover {
   background: #393939;
 }
-.bar-side nav li:hover ul {
+.side-bar nav li:hover ul {
   display: block;
 }
 
