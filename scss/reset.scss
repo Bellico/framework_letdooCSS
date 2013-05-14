@@ -7,7 +7,7 @@ html{
 	background:#FFF;
 }
 
-body,table,form,h1,h2,h3,h4,h5,h6,p,ul{
+body,table,form,h1,h2,h3,h4,h5,h6,p,ul,fieldset,input,textarea,button{
 	margin:0;
 	padding: 0;
 	font-family:inherit;
@@ -18,9 +18,19 @@ body,table,form,h1,h2,h3,h4,h5,h6,p,ul{
 ul{list-style: none;}
 
 button{
-	margin: 0;
-	padding: 0;
 	border: none;
 	background: none;
-	font: inherit;
+}
+
+fieldset{
+	border: 1px solid #000;
+}
+
+input,textarea{
+	border : none;
+	background: none;
+}
+
+input:focus,textarea:focus{
+	outline: none;
 }
