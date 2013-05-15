@@ -34,3 +34,8 @@ input,textarea{
 input:focus,textarea:focus{
 	outline: none;
 }
+
+input[type="submit"],input[type="search"]{
+	box-sizing: content-box;
+	-moz-box-sizing : content-box;
+}
