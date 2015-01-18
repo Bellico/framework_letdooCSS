@@ -1,0 +1,39 @@
+.form-group{
+
+  margin: 0.5em 0;
+
+  label, .help{
+    margin: 0 0.3em;
+  }
+
+  label{
+    width: 200px;
+    display: block;
+  }
+
+}
+
+.form-control{
+  padding: 0.4em;
+  margin: 0.5em 0.3em;
+  width: 250px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background : darken(map-get($color-theme, "contentPage"), 4%); //#E5E5E5
+}
+
+.form-control[type=checkbox]{
+   width: 28px;
+  height: 28px;
+  background: #fcfff4;
+
+}
+
+.form-control[type=checkbox]:after{
+   width: 28px;
+  height: 28px;
+  background: #fcfff4;
+
+}

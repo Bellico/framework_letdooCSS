@@ -1,0 +1,15 @@
+$color-theme : (
+  'windowhome' : #50B395,
+  'body' : #FD6E16,
+  'header': #1E88E5,
+  'footer' : #2D2B29,
+  'contentPage': #FAFAFA
+);
+
+body{
+  background: map-get($color-theme, "body");
+  color : #2F322D;
+  font-family: sans-serif;
+  font-size: 1.09em;
+  letter-spacing: 1px;
+}

@@ -1,8 +1,7 @@
 http_path="/"
-css_dir="doc-html/assets/"
-sass_dir="scss/"
-images_dir="doc-html/assets/img/"
+css_dir="src/styles/"
+sass_dir="src/scss/"
+images_dir="src/img/"
 line_comments=false
-#output_style = :compressed
 output_style = :expanded
-require 'animation'
+#require 'animation'

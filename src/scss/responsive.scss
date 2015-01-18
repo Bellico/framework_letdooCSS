@@ -1,0 +1,58 @@
+$breakpoints: (
+  xs: ( max : "480px"),
+  sm: ( max : "768px", min : "481px"),
+  md: ( max : "1024px", min : "769px"),
+  lg: ( min : "1025px")
+);
+
+@mixin display-xs(){
+  @include xs-globals;
+}
+
+@mixin display-sm(){
+
+}
+
+@mixin display-md(){
+
+}
+
+@mixin display-lg(){
+
+}
+
+//MAX
+@mixin max-display-sm(){
+
+}
+
+@mixin max-display-md(){
+
+}
+
+
+@each $key, $breakpoint in $breakpoints {
+  $max : map-get($breakpoint, "max");
+  $min : map-get($breakpoint, "min");
+
+  $query : '';
+  @if $min == null { $query : '(max-width : #{$max})'}
+  @else if $max == null { $query : '(min-width : #{$min})'}
+  @else { $query : '(max-width : #{$max}) and (min-width: #{$min})' }
+
+  @media #{$query} {
+    @include renderGrid($key);
+    @if $key == 'xs' { @include display-xs;}
+    @else if $key == 'sm' { @include display-sm }
+    @else if $key == 'md' { @include display-md }
+    @else if $key == 'lg' { @include display-lg }
+  }
+
+  @if $max != null {
+   $query : '(max-width : #{$max})';
+   @media #{$query} {
+      @if $key == 'sm' { @include max-display-sm }
+      @else if $key == 'md' { @include max-display-md }
+    }
+  }
+}

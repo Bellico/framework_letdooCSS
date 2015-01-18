@@ -1,0 +1,36 @@
+$settings-grid: (
+    maxWidth: null,
+    columns: 12,
+    gutter: 15px,
+);
+
+.container {
+  max-width: map-get($settings-grid, "maxWidth");
+  padding: 0 map-get($settings-grid, "gutter");
+  margin: auto;
+}
+
+.row {
+  margin: 0 map-get($settings-grid, "gutter") * -0.5;
+  padding: map-get($settings-grid, "gutter") * 0.5 0;
+  @include clearfix;
+}
+
+.row > div{
+  float: left;
+  min-height: 1px;
+  padding: 0 map-get($settings-grid, "gutter") * 0.5;
+  box-sizing: border-box;
+}
+
+@mixin renderGrid($key) {
+  .row .col-#{$key}-hidden {
+    display: none;
+  }
+
+  @for $i from 1 through map-get($settings-grid, "columns") {
+    .row .col-#{$key}-#{$i} {
+      width: 100% * $i / map-get($settings-grid,"columns");
+    }
+  }
+}

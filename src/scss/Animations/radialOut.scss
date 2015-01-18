@@ -1,0 +1,29 @@
+.radial-out {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  @include backface-visibility(hidden);
+
+  @include transform(translateZ(0));
+  @include transition(color, 0.3s)
+}
+.radial-out:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: map-get($color-theme, "body");
+  border-radius: 100%;
+
+  @include transition(transform, 0.3s, ease-out);
+  @include transform( scale(0), true );
+}
+.radial-out:hover, .radial-out:focus, .radial-out:active {
+  color: #FFF;
+}
+.radial-out:hover:after, .radial-out:focus:after, .radial-out:active:after {
+  @include transform( scale(2), true );
+}

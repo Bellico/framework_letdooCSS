@@ -1,0 +1,73 @@
+/*
+Error: Undefined mixin 'clearfix'.
+        on line 16 of d:/Dev/Project/Letdoocss/src/scss/grid.scss, in `clearfix'
+        from line 16 of d:/Dev/Project/Letdoocss/src/scss/grid.scss
+
+11: }
+12: 
+13: .row {
+14:   margin: 0 map-get($settings-grid, "gutter") * -0.5;
+15:   padding: map-get($settings-grid, "gutter") * 0.5 0;
+16:   @include clearfix;
+17: }
+18: 
+19: .row > div{
+20:   float: left;
+21:   min-height: 1px;
+
+Backtrace:
+d:/Dev/Project/Letdoocss/src/scss/grid.scss:16:in `clearfix'
+d:/Dev/Project/Letdoocss/src/scss/grid.scss:16
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'clearfix'.\A         on line 16 of d:/Dev/Project/Letdoocss/src/scss/grid.scss, in `clearfix'\A         from line 16 of d:/Dev/Project/Letdoocss/src/scss/grid.scss\A \A 11: }\A 12: \A 13: .row {\A 14:   margin: 0 map-get($settings-grid, \"gutter\") * -0.5;\A 15:   padding: map-get($settings-grid, \"gutter\") * 0.5 0;\A 16:   @include clearfix;\A 17: }\A 18: \A 19: .row > div{\A 20:   float: left;\A 21:   min-height: 1px;"; }
