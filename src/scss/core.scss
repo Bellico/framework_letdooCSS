@@ -1,15 +1,23 @@
 $color-theme : (
-  'windowhome' : #50B395,
-  'body' : #FD6E16,
-  'header': #1E88E5,
+  'windowhome' : #3BC389,
+  'body' : #2F322D,
+  'header': #2196F3,
   'footer' : #2D2B29,
-  'contentPage': #FAFAFA
+  'contentPage': #FAFAFA,
+  'colors' : (
+    'blue': #2196F3,
+    'orange': #FD6E16,
+    'red': #D82F2F,
+    'green' : #2FB69E
+  )
 );
+
+$colors : map-get($color-theme, "colors");
 
 body{
   background: map-get($color-theme, "body");
-  color : #2F322D;
-  font-family: sans-serif;
+  color : map-get($color-theme, "body");
+  font-family: sans-serif; //Calibri
   font-size: 1.09em;
   letter-spacing: 1px;
 }

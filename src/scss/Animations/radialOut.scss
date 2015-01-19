@@ -1,12 +1,17 @@
 .radial-out {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
+  text-align: center;
   @include backface-visibility(hidden);
 
   @include transform(translateZ(0));
   @include transition(color, 0.3s)
 }
+
+.radial-out:hover{
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
 .radial-out:after {
   content: "";
   position: absolute;
@@ -21,6 +26,13 @@
   @include transition(transform, 0.3s, ease-out);
   @include transform( scale(0), true );
 }
+
+@each $name, $color in $colors {
+  .radial-out.#{$name}:after{
+    background : $color;
+  }
+}
+
 .radial-out:hover, .radial-out:focus, .radial-out:active {
   color: #FFF;
 }

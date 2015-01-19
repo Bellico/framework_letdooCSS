@@ -14,8 +14,7 @@
   }
 };
 
-.flipOut {
-  @include backface-visibility(visible);
+%flipOut {
   @include animation-name(flipOut);
   @include animation-duration(0.75s);
 }
@@ -35,9 +34,7 @@
   }
 };
 
-.flipIn {
-  @include backface-visibility(visible);
+%flipIn {
   @include animation-name(flipIn);
-  @include animation-duration(0.75s);
-  //@include animation-direction(reverse);
+  @include animation-duration(0.76s);
 }

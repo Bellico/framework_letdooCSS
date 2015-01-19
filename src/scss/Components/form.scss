@@ -1,39 +1,72 @@
 .form-group{
-
   margin: 0.5em 0;
 
   label, .help{
-    margin: 0 0.3em;
+
   }
 
   label{
     width: 200px;
     display: block;
   }
-
 }
 
 .form-control{
   padding: 0.4em;
-  margin: 0.5em 0.3em;
-  width: 250px;
+  margin: 0.5em 0;
+  width: 100%;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   border: none;
-  background : darken(map-get($color-theme, "contentPage"), 4%); //#E5E5E5
+  background : darken(map-get($color-theme, "contentPage"), 4%);
+}
+
+@each $name, $color in $colors {
+  .form-control.#{$name}{
+    background : $color;
+  }
+}
+
+textarea.form-control{
+  height: 120px;
 }
 
 .form-control[type=checkbox]{
-   width: 28px;
-  height: 28px;
-  background: #fcfff4;
-
+  display: none;
 }
 
-.form-control[type=checkbox]:after{
-   width: 28px;
-  height: 28px;
-  background: #fcfff4;
+.form-control[type=checkbox] + label{
+  position: relative;
 
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border: 2px solid #B3B1B1;
+  cursor: pointer;
+}
+
+.form-control[type=checkbox]:checked  + label{
+  border: none;
+  background : map-get($color-theme, "body");
+}
+
+@each $name, $color in $colors {
+  .form-control.#{$name}[type=checkbox]:checked  + label{
+    background : $color;
+  }
+}
+
+.form-control[type=checkbox]:checked  + label:before{
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 9px;
+  height: 5px;
+  border: 3px solid #FFF;
+  border-top: none;
+  border-right: none;
+  @include transform(rotate(-45deg));
 }

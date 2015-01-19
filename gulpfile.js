@@ -9,7 +9,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('compass', function() {
-  gulp.src(['src/scss/**/*.scss', 'src/scss/**/*.sass'])
+  gulp.src(['src/scss/letdoocss.scss'])
     .pipe(plugins.plumber())
     .pipe(plugins.compass({
       config_file: 'config.rb',
@@ -20,27 +20,19 @@ gulp.task('compass', function() {
       console.log(error);
       this.emit('end');
     })
-    .pipe(gulp.dest('src/styles'));
+    .pipe(gulp.dest('temp/'));
 });
 
 gulp.task('styles', ['compass'], function () {
-  return gulp.src('src/styles/**/*.css')
+  return gulp.src('temp/letdoocss.css')
   .pipe(require('gulp-minify-css')())
-  .pipe(gulp.dest('dist/style.min'));
+  .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('clean', require('del').bind(null, ['tmp', 'dist']));
+gulp.task('clean', require('del').bind(null, ['tmp/', 'dist']));
 
-gulp.task('inject', function () {
-  var sources = gulp.src(['src/styles/**/*.css', '!src/styles/letdoocss.css'], {read: false});
-  return gulp.src('./src/index.html')
-  .pipe(plugins.inject(sources, {relative: true}))
-  .pipe(gulp.dest('./src'));
-});
-
-gulp.task('watch-common', ['inject', 'compass'], function () {
+gulp.task('watch-common', ['compass'], function () {
   gulp.watch(['src/scss/**/*.scss', 'src/scss/**/*.sass'], ['compass']);
-  gulp.watch(['src/**/*.js', 'src/styles/**/*.css'], ['inject']);
 });
 
 /*********************************************/
