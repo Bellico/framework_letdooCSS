@@ -1,0 +1,42 @@
+.nav-bar{
+  .item-nav > a{
+    display: block;
+  }
+
+  .header, .item-nav > a{
+   padding: 1em 0.7em;
+  }
+
+  .header{
+    text-align: center;
+    text-transform: uppercase;
+    background: map-get($color-theme, "body");
+    color: map-get($color-theme, "contentPage");
+  }
+}
+
+.nav-bar.inline{
+  overflow: hidden;
+  background: map-get($color-theme, "body");
+  color: map-get($color-theme, "contentPage");
+
+  .header, .item-nav{
+    float: left;
+  }
+
+  .item-nav:hover{
+    background: darken(map-get($color-theme, "body"), 5%);
+  }
+}
+
+.nav-bar.left{
+  min-width: 250px;
+  margin: 0 2em 2em 0;
+  float: left;
+  background: darken(map-get($color-theme, "contentPage"), 4%);
+
+  .item-nav:hover{
+    background: lighten(map-get($color-theme, "body"), 5%);
+    color: map-get($color-theme, "contentPage");
+  }
+}

@@ -1,0 +1,10 @@
+.header, .footer{
+  padding: 1.5em 0;
+  padding-top: 0;
+  background: map-get($color-theme, "header-footer");
+  color : map-get($color-theme, "contentPage");
+}
+
+header.full{
+  height: 100%;
+}

@@ -4,19 +4,21 @@
 
 @import "core";
 
-@import "grid";
-
 @import "globals";
 
-@import "Layout/header";
+@import "Layout/header-footer";
 
 @import "Layout/contentPage";
 
-@import "Layout/footer";
+@import "Components/grid";
+
+@import "Components/nav-bar";
 
 @import "Components/window";
 
 @import "Components/form";
+
+@import "Components/table";
 
 @import "Components/button";
 

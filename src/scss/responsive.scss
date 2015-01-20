@@ -7,6 +7,7 @@ $breakpoints: (
 
 @mixin display-xs(){
   @include xs-globals;
+  @include xs-table;
 }
 
 @mixin display-sm(){

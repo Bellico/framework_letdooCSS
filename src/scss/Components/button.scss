@@ -11,7 +11,7 @@
   display: inline-block;
   text-align: center;
   background-color: map-get($color-theme, "body");
-  color: #FFF;
+  color: map-get($color-theme, "contentPage");
   box-shadow: 0px 1px 2px #B4B4B4;
   @include transition (background-color 300ms ease-out);
 }
@@ -33,9 +33,6 @@
 .link{
   background: none;
   font-weight: bold;
-  padding: 0;
-  margin: 0 0.5em;
-
   color: map-get($colors, "blue");
 }
 

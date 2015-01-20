@@ -19,6 +19,14 @@ h3{
    font-size: 1.5em;
 }
 
+.perspective {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
 .icon-new{
   width: 50px;
   height: 50px;
@@ -48,10 +56,30 @@ p{
   line-height: 1.2em;
 }
 
-@each $name, $color in $colors {
-  p.#{$name}{
-    color : $color;
+.middle{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &:before{
+    content: '';
+    flex: 1;
   }
+  &:after{
+    content: '';
+    flex: 1;
+  }
+}
+
+.clear{
+  clear: both;
+}
+
+.notify{
+  margin: 2em 0;
+  padding: 1em;
+  background: #F0F0F0;
+  border: 2px solid darken(#F0F0F0, 30%);
 }
 
 @mixin xs-globals{

@@ -1,23 +1,63 @@
 $color-theme : (
-  'windowhome' : #3BC389,
   'body' : #2F322D,
-  'header': #2196F3,
-  'footer' : #2D2B29,
+  'header-footer' : #1f1f1f,
   'contentPage': #FAFAFA,
   'colors' : (
     'blue': #2196F3,
     'orange': #FD6E16,
-    'red': #D82F2F,
+    'red': #CF4646,
     'green' : #2FB69E
   )
 );
 
 $colors : map-get($color-theme, "colors");
 
+html, body {
+  height: 100%;
+}
+
 body{
   background: map-get($color-theme, "body");
   color : map-get($color-theme, "body");
-  font-family: sans-serif; //Calibri
+  font-family: sans-serif; //Calibri //Georgia
   font-size: 1.09em;
   letter-spacing: 1px;
+}
+
+
+//Apply Colors
+@each $name, $color in $colors {
+
+  .header.#{$name},
+  .window.#{$name},
+  .form-control.#{$name},
+  .form-control.#{$name}[type=checkbox]:checked  + label,
+  .radial-out.#{$name}:after,
+  .table.#{$name} thead > tr,
+  .nav-bar.#{$name} .header,
+  .nav-bar.inline.#{$name}
+  {
+    background : $color;
+  }
+
+  .nav-bar.left.#{$name} .item-nav:hover{
+    background: lighten($color, 5%);
+  }
+
+  .nav-bar.inline.#{$name} .item-nav:hover{
+    background: darken($color, 5%);
+  }
+
+  .notify.#{$name}{
+    background: lighten($color, 25%);
+    color: darken($color,15%);
+  }
+  .notify.#{$name}{
+    border-color: $color;
+  }
+
+  p.#{$name}{
+    color : $color;
+  }
+
 }

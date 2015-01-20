@@ -1,10 +1,6 @@
 .form-group{
   margin: 0.5em 0;
 
-  label, .help{
-
-  }
-
   label{
     width: 200px;
     display: block;
@@ -21,12 +17,6 @@
   color: inherit;
   border: none;
   background : darken(map-get($color-theme, "contentPage"), 4%);
-}
-
-@each $name, $color in $colors {
-  .form-control.#{$name}{
-    background : $color;
-  }
 }
 
 textarea.form-control{
@@ -50,12 +40,6 @@ textarea.form-control{
 .form-control[type=checkbox]:checked  + label{
   border: none;
   background : map-get($color-theme, "body");
-}
-
-@each $name, $color in $colors {
-  .form-control.#{$name}[type=checkbox]:checked  + label{
-    background : $color;
-  }
 }
 
 .form-control[type=checkbox]:checked  + label:before{
