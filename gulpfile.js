@@ -20,11 +20,11 @@ gulp.task('compass', function() {
       console.log(error);
       this.emit('end');
     })
-    .pipe(gulp.dest('tmp/'));
+    .pipe(gulp.dest('src/styles'));
 });
 
 gulp.task('styles', ['compass'], function () {
-  return gulp.src('tmp/letdoocss.css')
+  return gulp.src('src/styles/letdoocss.css')
   .pipe(require('gulp-minify-css')())
   .pipe(gulp.dest('dist/'));
 });
