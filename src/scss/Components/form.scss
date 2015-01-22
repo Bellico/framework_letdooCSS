@@ -16,11 +16,12 @@
   font-size: inherit;
   color: inherit;
   border: none;
-  background : darken(map-get($color-theme, "contentPage"), 4%);
+  background : darken(map-get($color-theme, "contentPage"), 5%);
 }
 
 textarea.form-control{
   height: 120px;
+  max-width: 100%;
 }
 
 .form-control[type=checkbox]{
@@ -53,4 +54,13 @@ textarea.form-control{
   border-top: none;
   border-right: none;
   @include transform(rotate(-45deg));
+}
+
+.form-control.search{
+  width: 250px;
+  float: left;
+
+  & + button[type="submit"]{
+    float: left;
+  }
 }

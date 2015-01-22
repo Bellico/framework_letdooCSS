@@ -1,42 +1,118 @@
 .nav-bar{
-  .item-nav > a{
+  .item-nav > a, .item-nav > span{
     display: block;
   }
 
-  .header, .item-nav > a{
-   padding: 1em 0.7em;
+  .nav-header, .item-nav > a, .item-nav > span{
+   padding: 1.2em 0.7em;
   }
 
-  .header{
+  .nav-header{
     text-align: center;
     text-transform: uppercase;
-    background: map-get($color-theme, "body");
     color: map-get($color-theme, "contentPage");
+  }
+
+  .item-nav.drop{
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      margin-top: -2px;
+      width: 0px;
+      height: 0px;
+      border-top: 5px solid #FFF;
+      border-right: 5px solid rgba(255, 0, 0, 0);
+      border-left: 5px solid rgba(255, 0, 0, 0);
+    }
   }
 }
 
 .nav-bar.inline{
-  overflow: hidden;
-  background: map-get($color-theme, "body");
+  display: inline-block;
+  width: 100%;
+  background: map-get($color-theme, "default");
   color: map-get($color-theme, "contentPage");
-
-  .header, .item-nav{
-    float: left;
-  }
+  font-weight: bold;
 
   .item-nav:hover{
-    background: darken(map-get($color-theme, "body"), 5%);
+    background: lighten(map-get($color-theme, "default"), 5%);
+  }
+
+  .item-option button, .item-option input{
+    margin: 0px;
+    padding: 1.2em 0.7em;
+  }
+
+  &.default{
+      color: map-get($color-theme, "body");
+      background : map-get($color-theme, "contentPage");
+
+      .nav-header{
+        color: map-get($color-theme, "body");
+      }
+
+      .item-nav:hover{
+        background-color: darken(map-get($color-theme, "contentPage"), 10%);
+      }
+  }
+
+}
+
+@mixin nav-bav-min-sm{
+  .nav-bar.inline{
+
+    .nav-header, .item-nav, .item-option{
+      float: left;
+      position: relative;
+    }
+
+   .item-nav:hover{
+      > .sub-nav{
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .sub-nav{
+      position: absolute;
+      left: 0;
+      top: 110%;
+      background: map-get($color-theme, "default");
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.1s;
+      z-index: 1;
+
+       .item-nav{
+        float: none;
+       }
+    }
+
+  }
+}
+
+@mixin nav-bav-max-sm{
+  .nav-bar.inline .sub-nav{
+    padding-left: 2em;
   }
 }
 
 .nav-bar.left{
   min-width: 250px;
   margin: 0 2em 2em 0;
-  float: left;
   background: darken(map-get($color-theme, "contentPage"), 4%);
 
+  .nav-header{
+     background: map-get($color-theme, "default");
+  }
+
   .item-nav:hover{
-    background: lighten(map-get($color-theme, "body"), 5%);
+    background: lighten(map-get($color-theme, "default"), 5%);
     color: map-get($color-theme, "contentPage");
   }
 }

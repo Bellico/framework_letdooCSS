@@ -3,10 +3,16 @@
   background: map-get($color-theme, "contentPage");
 }
 
-.spaced{
+.section-spaced{
   margin-top: 20em;
 
   section{
     margin-bottom: 20em;
+  }
+}
+
+.section-change{
+  section:nth-child(odd){
+    background: darken(map-get($color-theme, "contentPage"), 5%);
   }
 }

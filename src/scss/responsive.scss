@@ -28,7 +28,15 @@ $breakpoints: (
 }
 
 @mixin max-display-md(){
+  @include nav-bav-max-sm;
+}
 
+//MIN
+@mixin min-display-sm(){
+}
+
+@mixin min-display-md(){
+   @include nav-bav-min-sm;
 }
 
 
@@ -54,6 +62,14 @@ $breakpoints: (
    @media #{$query} {
       @if $key == 'sm' { @include max-display-sm }
       @else if $key == 'md' { @include max-display-md }
+    }
+  }
+
+  @if $min != null {
+   $query : '(min-width : #{$min})';
+   @media #{$query} {
+      @if $key == 'sm' { @include min-display-sm }
+      @else if $key == 'md' { @include min-display-md }
     }
   }
 }
