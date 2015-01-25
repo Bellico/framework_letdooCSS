@@ -1,8 +1,9 @@
 $color-theme : (
-  'body' : #2F322D,
-  'contentPage': #F5F5F5,
-  'default' : #1f1f1f,
+  'font' : #2F322D,
+  'default' : #F5F5F5,
   'colors' : (
+    'dark': #2F322D,
+    'dark2': #1f1f1f,
     'blue': #2196F3,
     'orange': #FD6E16,
     'red': #CF4646,
@@ -17,8 +18,8 @@ html, body {
 }
 
 body{
-  background: map-get($color-theme, "body");
-  color : map-get($color-theme, "body");
+  background: map-get($color-theme, "font");
+  color : map-get($color-theme, "font");
   font-family: sans-serif; //Calibri //Georgia //Montserrat //Segoe UI
   font-size: 1.09em;
   letter-spacing: 1px;

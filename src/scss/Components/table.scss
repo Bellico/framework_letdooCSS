@@ -4,8 +4,7 @@
   box-shadow: 0px 1px 2px #B4B4B4;
 
   thead > tr{
-    background: map-get($color-theme, "body");
-    color: map-get($color-theme, "contentPage");
+    background: map-get($color-theme, "default");
 
     th{
       font-weight: bold;
@@ -14,7 +13,7 @@
   }
 
   tbody > tr:nth-of-type(odd){
-     background: darken(map-get($color-theme, "contentPage"), 4%);
+     background: darken(map-get($color-theme, "default"), 5%);
   }
 
   td, th{

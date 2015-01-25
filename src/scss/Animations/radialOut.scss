@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: map-get($color-theme, "body");
+  background: map-get($color-theme, "font");
   border-radius: 100%;
 
   @include transition(transform, 0.3s, ease-out);
@@ -30,6 +30,7 @@
 .radial-out:hover, .radial-out:focus, .radial-out:active {
   color: #FFF;
 }
+
 .radial-out:hover:after, .radial-out:focus:after, .radial-out:active:after {
   @include transform( scale(2), true );
 }

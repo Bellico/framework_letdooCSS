@@ -16,7 +16,7 @@
   font-size: inherit;
   color: inherit;
   border: none;
-  background : darken(map-get($color-theme, "contentPage"), 5%);
+  background : darken(map-get($color-theme, "default"), 5%);
 }
 
 textarea.form-control{
@@ -30,7 +30,6 @@ textarea.form-control{
 
 .form-control[type=checkbox] + label{
   position: relative;
-
   width: 22px;
   height: 22px;
   display: inline-block;
@@ -40,7 +39,7 @@ textarea.form-control{
 
 .form-control[type=checkbox]:checked  + label{
   border: none;
-  background : map-get($color-theme, "body");
+  background : map-get($color-theme, "font");
 }
 
 .form-control[type=checkbox]:checked  + label:before{

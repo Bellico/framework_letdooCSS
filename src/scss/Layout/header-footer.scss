@@ -1,7 +1,7 @@
-.header, .footer{
+.header, .footer, .content-page{
   padding: 1.5em 0;
   background: map-get($color-theme, "default");
-  color : map-get($color-theme, "contentPage");
+  color: map-get($color-theme, "font");
 }
 
 .header{

@@ -7,8 +7,4 @@
   overflow-x: hidden;
   overflow-y: auto;
   background : map-get($color-theme, "default");
-
-  &.default{
-    background : map-get($color-theme, "contentPage");
-  }
 }

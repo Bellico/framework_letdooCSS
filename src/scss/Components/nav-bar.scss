@@ -10,7 +10,6 @@
   .nav-header{
     text-align: center;
     text-transform: uppercase;
-    color: map-get($color-theme, "contentPage");
   }
 
   .item-nav.drop{
@@ -35,7 +34,6 @@
   display: inline-block;
   width: 100%;
   background: map-get($color-theme, "default");
-  color: map-get($color-theme, "contentPage");
   font-weight: bold;
 
   .item-nav:hover{
@@ -46,20 +44,6 @@
     margin: 0px;
     padding: 1.2em 0.7em;
   }
-
-  &.default{
-      color: map-get($color-theme, "body");
-      background : map-get($color-theme, "contentPage");
-
-      .nav-header{
-        color: map-get($color-theme, "body");
-      }
-
-      .item-nav:hover{
-        background-color: darken(map-get($color-theme, "contentPage"), 10%);
-      }
-  }
-
 }
 
 @mixin nav-bav-min-sm{
@@ -92,7 +76,6 @@
         float: none;
        }
     }
-
   }
 }
 
@@ -105,7 +88,7 @@
 .nav-bar.left{
   min-width: 250px;
   margin: 0 2em 2em 0;
-  background: darken(map-get($color-theme, "contentPage"), 4%);
+  background: darken(map-get($color-theme, "default"), 5%);
 
   .nav-header{
      background: map-get($color-theme, "default");
@@ -113,6 +96,5 @@
 
   .item-nav:hover{
     background: lighten(map-get($color-theme, "default"), 5%);
-    color: map-get($color-theme, "contentPage");
   }
 }

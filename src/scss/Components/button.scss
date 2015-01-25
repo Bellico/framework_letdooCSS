@@ -10,8 +10,7 @@
   margin-bottom: 0.3em;
   padding: 0.9em 2em;;
   text-align: center;
-  background-color: map-get($color-theme, "body");
-  color: map-get($color-theme, "contentPage");
+  background: map-get($color-theme, "default");
   box-shadow: 0px 1px 2px #B4B4B4;
   @include transition (background-color 300ms ease-out);
 }
@@ -25,17 +24,7 @@
 }
 
 .btn:hover{
-  background-color: darken(map-get($color-theme, "body"), 10%);
-}
-
-.btn.default{
-  color: inherit;
-  font-weight: bold;
-  background-color: map-get($color-theme, "contentPage")
-}
-
-.btn.default:hover{
-  background-color: darken(map-get($color-theme, "contentPage"), 10%);
+  background: darken(map-get($color-theme, "default"), 10%);
 }
 
 .link{
