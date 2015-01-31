@@ -1,13 +1,6 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({ pattern: ['gulp-*'] });
 
-gulp.task('sass', function () {
-  return gulp.src('src/scss/**/*.scss')
-  .pipe(plugins.plumber())
-  .pipe(plugins.sass())
-  .pipe(gulp.dest('src/styles/'));
-});
-
 gulp.task('compass', function() {
   gulp.src(['src/scss/letdoocss.scss'])
     .pipe(plugins.plumber())
@@ -23,30 +16,30 @@ gulp.task('compass', function() {
     .pipe(gulp.dest('src/styles'));
 });
 
-gulp.task('styles', ['compass'], function () {
+gulp.task('copy', ['compass'], function () {
+  return gulp.src('src/styles/letdoocss.css')
+  .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('build', ['copy'], function () {
   return gulp.src('src/styles/letdoocss.css')
   .pipe(require('gulp-minify-css')())
+  .pipe(plugins.rename("letdoocss.min.css"))
   .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('clean', require('del').bind(null, ['tmp/', 'dist']));
 
-gulp.task('watch-common', ['compass'], function () {
-  gulp.watch(['src/scss/**/*.scss', 'src/scss/**/*.sass'], ['compass']);
-});
-
-/*********************************************/
-//Web Server
 gulp.task('connect', function () {
   var serveStatic = require('serve-static');
 
-  var app = require('connect')()
-  app.use(require('connect-livereload')({port: 35729}))
+  var app = require('connect')();
+  app.use(require('connect-livereload')({port: 35729}));
   app.use(serveStatic('src'));
 
-  require('http').createServer(app).listen(9000)
+  require('http').createServer(app).listen(8000)
   .on('listening', function () {
-    console.log('Started connect web server on http://localhost:9000');
+    console.log('Started connect web server on http://localhost:8000');
   });
 });
 
@@ -62,19 +55,5 @@ gulp.task('watch-serve', ['connect'], function () {
 });
 
 gulp.task('serve', ['watch-serve'], function(){
-  require('opn')('http://localhost:9000', 'firefox');
+  require('opn')('http://localhost:8000', 'firefox');
 });
-
-gulp.task('serve:dist', ['default'], function () {
-  initServe('dist');
-  require('opn')('http://localhost:9000');
-});
-
-gulp.task('build', ['appBuild', 'images', 'extras'], function () {
-  return gulp.src('dist/**/*').pipe(plugins.size({title: 'build', gzip: false}));
-});
-
-gulp.task('default', ['clean'], function () {
-  gulp.start('build');
-});
-

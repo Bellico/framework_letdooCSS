@@ -34,7 +34,6 @@
   display: inline-block;
   width: 100%;
   background: map-get($color-theme, "default");
-  font-weight: bold;
 
   .item-nav:hover{
     background: lighten(map-get($color-theme, "default"), 5%);

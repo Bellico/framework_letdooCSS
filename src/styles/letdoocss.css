@@ -68,7 +68,7 @@ html, body {
 }
 
 body {
-  background: #2F322D;
+  background: #F5F5F5;
   color: #2F322D;
   font-family: sans-serif;
   font-size: 1.09em;
@@ -178,8 +178,6 @@ p {
 
 .header, .footer, .content-page {
   padding: 1.5em 0;
-  background: #F5F5F5;
-  color: #2F322D;
 }
 
 .header {
@@ -188,6 +186,11 @@ p {
 
 header.full {
   height: 100%;
+}
+
+.content-page {
+  background: #F5F5F5;
+  color: #2F322D;
 }
 
 .section-spaced {
@@ -250,7 +253,6 @@ header.full {
   display: inline-block;
   width: 100%;
   background: #F5F5F5;
-  font-weight: bold;
 }
 .nav-bar.inline .item-nav:hover {
   background: white;
@@ -280,7 +282,6 @@ header.full {
   right: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #F5F5F5;
 }
 
 .form-group {

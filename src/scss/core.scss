@@ -18,7 +18,7 @@ html, body {
 }
 
 body{
-  background: map-get($color-theme, "font");
+  background: map-get($color-theme, "default");
   color : map-get($color-theme, "font");
   font-family: sans-serif; //Calibri //Georgia //Montserrat //Segoe UI
   font-size: 1.09em;
