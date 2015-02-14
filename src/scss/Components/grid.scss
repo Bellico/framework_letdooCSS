@@ -10,20 +10,25 @@ $settings-grid: (
   margin: auto;
 }
 
-.row {
+.row, .row-flex {
   margin: 0 map-get($settings-grid, "gutter") * -0.5;
   padding: map-get($settings-grid, "gutter") * 0.5 0;
-  @include clearfix;
+  overflow: hidden
 }
 
 .row > div{
   float: left;
-  min-height: 1px;
   padding: 0 map-get($settings-grid, "gutter") * 0.5;
   box-sizing: border-box;
 }
 
-@mixin renderGrid($key) {
+@for $i from 1 through map-get($settings-grid, "columns") {
+  .row .col-#{$i} {
+    width: 100% * $i / map-get($settings-grid,"columns");
+  }
+}
+
+@mixin renderGridByMedia($key) {
   .row .col-#{$key}-hidden {
     display: none;
   }
@@ -33,4 +38,14 @@ $settings-grid: (
       width: 100% * $i / map-get($settings-grid,"columns");
     }
   }
+}
+
+.row-flex {
+  flex-direction: row;
+  display: flex;
+}
+
+.row-flex .col {
+  flex: auto;
+  padding: 0 map-get($settings-grid, "gutter") * 0.5;
 }

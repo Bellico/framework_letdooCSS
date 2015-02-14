@@ -8,6 +8,7 @@ $breakpoints: (
 @mixin display-xs(){
   @include xs-globals;
   @include xs-table;
+  @include nav-bar-max-sm;
 }
 
 @mixin display-sm(){
@@ -28,15 +29,16 @@ $breakpoints: (
 }
 
 @mixin max-display-md(){
-  @include nav-bav-max-sm;
+
 }
 
 //MIN
 @mixin min-display-sm(){
+  @include nav-bar-min-sm;
 }
 
 @mixin min-display-md(){
-   @include nav-bav-min-sm;
+
 }
 
 
@@ -50,7 +52,7 @@ $breakpoints: (
   @else { $query : '(max-width : #{$max}) and (min-width: #{$min})' }
 
   @media #{$query} {
-    @include renderGrid($key);
+    @include renderGridByMedia($key);
     @if $key == 'xs' { @include display-xs;}
     @else if $key == 'sm' { @include display-sm }
     @else if $key == 'md' { @include display-md }

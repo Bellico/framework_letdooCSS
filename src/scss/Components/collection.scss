@@ -1,0 +1,18 @@
+.collection{
+  .item{
+    padding: 1em 0.5em;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .item.selected, .item:hover{
+    background-color: darken(map-get($color-theme, "default"), 5%);
+  }
+}
+
+.collection-inline{
+  .item{
+    padding: 0 0.2em;
+    display: inline-block;
+  }
+}

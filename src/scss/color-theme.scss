@@ -2,7 +2,6 @@
   .header.#{$name},
   .footer.#{$name},
   .content-page.#{$name},
-  .window.#{$name},
   .form-control.#{$name},
   .form-control.#{$name}[type=checkbox]:checked  + label,
   .radial-out.#{$name}:after,
@@ -21,9 +20,11 @@
   }
 
   .nav-bar.inline.#{$name} .item-nav:hover{
-    background: darken($color, 5%);
+    background: darken($color, 10%);
   }
 
+  .window.#{$name},
+  .modal.#{$name},
   .nav-bar.inline.#{$name} .sub-nav{
     background: $color;
   }
@@ -35,7 +36,7 @@
   .notify.#{$name}{
     background: $color;
     color: #FFF;
-    border-color: darken($color, 15%);
+    border-color: darken($color, 20%);
   }
 
   p.#{$name}{

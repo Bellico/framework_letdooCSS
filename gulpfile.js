@@ -57,3 +57,7 @@ gulp.task('watch-serve', ['connect'], function () {
 gulp.task('serve', ['watch-serve'], function(){
   require('opn')('http://localhost:8000', 'firefox');
 });
+
+gulp.task('watch', function(){
+   gulp.watch(['src/scss/**/*.scss', 'src/scss/**/*.sass'], ['compass']);
+});

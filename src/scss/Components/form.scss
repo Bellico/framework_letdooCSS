@@ -55,11 +55,26 @@ textarea.form-control{
   @include transform(rotate(-45deg));
 }
 
-.form-control.search{
-  width: 250px;
-  float: left;
-
-  & + button[type="submit"]{
-    float: left;
+form.search{
+  .form-control{
+    width: 250px;
+    background: #FFF;
   }
+
+  .icon-search{
+    padding: 0.4em;
+    box-sizing: border-box;
+    border: none;  font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    position: relative;
+
+    &:after{
+      content: 'ok';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
 }

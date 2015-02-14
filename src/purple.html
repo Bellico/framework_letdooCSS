@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>LetDooCss 2</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="styles/letdoocss.css">
+</head>
+  <body>
+    <header class="header purple">
+      <div class="container">
+        <div class="title-large">Chrome Dev  Test</div>
+        <div class="title-sm sub-title">Connecting you with Chrome Engineers</div>
+        <p>Lorem ipsum dolor sit amet, consectetur ad</p>
+      </div>
+    </header>
+    <div id="content" style="background:red;width: 200px;height: 200px;"></div>
+    <footer class="footer purple">
+    <ul class="collection-inline">
+      <li class="item">Termt</li>
+      <li class="item">Micence</li>
+      <li class="item">Perpusoe</li>
+    </ul>
+    </footer>
+
+    <script type="text/javascript">
+
+    var tidyUpAnimations = function (){
+      console.log("tidyUpAnimations");
+    };
+
+
+    var el = document.querySelector('#content');
+
+    var first = el.getBoundingClientRect();
+
+    // Now set the element to the last position.
+    el.classList.add('totes-at-the-end');
+
+    // Read again. This forces a sync layout, so be careful.
+    var last = el.getBoundingClientRect();
+
+    // You can do this for other computed styles as well, if needed.
+    // Just be sure to stick to compositor-only props like transform
+    // and opacity where possible.
+    var invert = first.top - last.top;
+
+    // Invert.
+    el.style.transform = 'translateY(' + invert + 'px)';
+
+    // Wait for the next frame so we know all the style changes have taken hold.
+    requestAnimationFrame(function() {
+
+      // Switch on animations.
+      el.classList.add('animate-on-transforms');
+
+      // GO GO GOOOOOO!
+      el.style.transform = '';
+    });
+
+    // Capture the end with transitionend
+    el.addEventListener('transitionend', tidyUpAnimations);
+
+
+    </script>
+  </body>
+</html>

@@ -7,7 +7,8 @@ $color-theme : (
     'blue': #2196F3,
     'orange': #FD6E16,
     'red': #CF4646,
-    'green' : #2FB69E
+    'green' : #2FB69E,
+    'purple' : #493B8A
   )
 );
 
@@ -20,7 +21,7 @@ html, body {
 body{
   background: map-get($color-theme, "default");
   color : map-get($color-theme, "font");
-  font-family: sans-serif; //Calibri //Georgia //Montserrat //Segoe UI
+  font-family: sans-serif; //Calibri //Georgia //Montserrat //Segoe UI //Myriad Pro
   font-size: 1.09em;
   letter-spacing: 1px;
 }
