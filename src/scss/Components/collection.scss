@@ -6,7 +6,7 @@
   }
 
   .item.selected, .item:hover{
-    background-color: darken(map-get($color-theme, "default"), 5%);
+    background: map-get($theme, "darkenBackground");
   }
 }
 

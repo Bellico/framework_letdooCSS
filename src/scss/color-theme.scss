@@ -1,32 +1,12 @@
 @each $name, $color in $colors {
-  .header.#{$name},
-  .footer.#{$name},
-  .content-page.#{$name},
   .form-control.#{$name},
   .form-control.#{$name}[type=checkbox]:checked  + label,
   .radial-out.#{$name}:after,
-  .table.#{$name} thead > tr,
-  .nav-bar.#{$name} .nav-header,
-  .nav-bar.inline.#{$name},
-  .btn.#{$name}
+  .btn.#{$name},
+  .notify.#{$name}
   {
     background : $color;
-    color : map-get($color-theme, "default");
-  }
-
-  .nav-bar.left.#{$name} .item-nav:hover{
-    background: lighten($color, 5%);
-    color : map-get($color-theme, "default");
-  }
-
-  .nav-bar.inline.#{$name} .item-nav:hover{
-    background: darken($color, 10%);
-  }
-
-  .window.#{$name},
-  .modal.#{$name},
-  .nav-bar.inline.#{$name} .sub-nav{
-    background: $color;
+    color : map-get($theme, "background");
   }
 
   .btn.#{$name}:hover{
@@ -34,8 +14,6 @@
   }
 
   .notify.#{$name}{
-    background: $color;
-    color: #FFF;
     border-color: darken($color, 20%);
   }
 

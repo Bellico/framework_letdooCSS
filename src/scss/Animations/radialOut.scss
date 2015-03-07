@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: map-get($color-theme, "font");
+  background: map-get($theme, "font");
   border-radius: 100%;
 
   @include transition(transform, 0.3s, ease-out);

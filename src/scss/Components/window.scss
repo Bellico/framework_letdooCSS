@@ -1,3 +1,7 @@
+.window, .modal{
+  background: map-get($theme, "font");
+}
+
 .window{
   position: absolute;
   top: 0;
@@ -6,7 +10,6 @@
   right: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: map-get($color-theme, "default");
 }
 
 .modal{
@@ -15,7 +18,6 @@
   left: 50%;
   box-shadow: 0 0 2px #000;
   @include transform(translate(-50%, -50%));
-  background: map-get($color-theme, "default");
   z-index: 3;
 }
 
@@ -57,7 +59,7 @@
   bottom: 0;
   z-index: 3;
   width: 340px;
-  background: map-get($color-theme, "default");
+ // background: map-get($color-theme, "default");
   box-shadow: 0 0 42px 0 rgba(0,0,0,.25);
 
   .footer{

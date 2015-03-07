@@ -1,6 +1,6 @@
 .content-page{
-   background: map-get($color-theme, "default");
-   color : map-get($color-theme, "font");
+   //background: map-get($color-theme, "default");
+   //color : map-get($color-theme, "font");
 }
 
 .section-spaced{
@@ -13,6 +13,6 @@
 
 .section-change{
   section:nth-child(odd){
-    background: darken(map-get($color-theme, "default"), 5%);
+    background: map-get($theme, "darkenBackground");
   }
 }

@@ -3,17 +3,8 @@
     display: block;
   }
 
-  .nav-header, .item-nav > a, .item-nav > span{
-   padding: 1.2em 0.7em;
-  }
-
   .item-nav{
     @include transition (background 300ms ease-out);
-  }
-
-  .nav-header{
-    text-align: center;
-    text-transform: uppercase;
   }
 
   .item-nav.drop{
@@ -32,25 +23,39 @@
       border-left: 4px solid rgba(255, 0, 0, 0);
     }
   }
+
 }
 
 .nav-bar.inline{
   display: inline-block;
   width: 100%;
-  background: map-get($color-theme, "default");
+  background: map-get($theme, "navbarBackground");
+  color: map-get($theme, "navbarColor");
+
+  .nav-header, .item-nav > a, .item-nav > span{
+    padding: 1rem 0.7rem;
+  }
+
+  .nav-header{
+    font-weight: bold;
+    font-size: 2em;
+  }
 
   .item-nav:hover{
-    background: darken(map-get($color-theme, "default"), 10%);
+    background: darken(map-get($theme, "navbarBackground"), 10%);
   }
 
   .sub-nav{
-    background: map-get($color-theme, "default");
+    background: map-get($theme, "navbarBackground");
   }
 
 }
 
 @mixin nav-bar-min-sm{
   .nav-bar.inline{
+
+    line-height: 100%;
+    padding: 0.5em 0 ;
 
     .nav-header, .item-nav, .item-option{
       float: left;
@@ -69,7 +74,6 @@
       position: absolute;
       left: 0;
       top: 110%;
-      background: map-get($color-theme, "default");
       opacity: 0;
       visibility: hidden;
       transition: all 0.1s;
@@ -78,6 +82,7 @@
        .item-nav{
         float: none;
        }
+
     }
 
     .sub-nav .sub-nav{
@@ -89,6 +94,11 @@
 }
 
 @mixin nav-bar-max-sm{
+
+  .nav-header{
+   text-align: center;
+  }
+
   .nav-bar.inline .sub-nav{
     padding-left: 2em;
   }
@@ -101,13 +111,19 @@
 .nav-bar.left{
   min-width: 250px;
   margin: 0 2em 2em 0;
-  background: darken(map-get($color-theme, "default"), 5%);
+  background: map-get($theme, "darkenBackground");
+
+  .nav-header, .item-nav > a{
+   padding: 1.2em 0.7em;
+  }
 
   .nav-header{
-     background: map-get($color-theme, "default");
+    text-align: center;
+    text-transform: uppercase;
+    background: darken(map-get($theme, "background"), 10%);
   }
 
   .item-nav:hover{
-    background: lighten(map-get($color-theme, "default"), 5%);
+    background: darken(map-get($theme, "background"), 10%);
   }
 }
