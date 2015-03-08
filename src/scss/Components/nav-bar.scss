@@ -14,7 +14,7 @@
       content: '';
       position: absolute;
       top: 50%;
-      right: 3px;
+      right: 10px;
       margin-top: -2px;
       width: 0px;
       height: 0px;
@@ -23,17 +23,14 @@
       border-left: 4px solid rgba(255, 0, 0, 0);
     }
   }
-
 }
 
 .nav-bar.inline{
-  display: inline-block;
-  width: 100%;
   background: map-get($theme, "navbarBackground");
   color: map-get($theme, "navbarColor");
 
   .nav-header, .item-nav > a, .item-nav > span{
-    padding: 1rem 0.7rem;
+    padding: 1rem 1.3rem;
   }
 
   .nav-header{
@@ -42,7 +39,7 @@
   }
 
   .item-nav:hover{
-    background: darken(map-get($theme, "navbarBackground"), 10%);
+    background: rgba(tint(map-get($theme, "navbarBackground"), 15%), 0.5)
   }
 
   .sub-nav{
@@ -52,10 +49,14 @@
 }
 
 @mixin nav-bar-min-sm{
-  .nav-bar.inline{
 
+  .nav-bar.inline{
     line-height: 100%;
     padding: 0.5em 0 ;
+    position: fixed;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 2px 5px rgba(map-get($theme, "headerBackground"), 0.84);
 
     .nav-header, .item-nav, .item-option{
       float: left;
@@ -73,14 +74,21 @@
     .sub-nav{
       position: absolute;
       left: 0;
-      top: 110%;
+      top: 120%;
       opacity: 0;
       visibility: hidden;
       transition: all 0.1s;
       z-index: 1;
+      border: 1px solid map-get($theme, "font");
+      background: map-get($theme, "background");
+      color: map-get($theme, "font");
 
        .item-nav{
         float: none;
+       }
+
+       .item-nav:hover{
+        background: map-get($theme, "#fff");
        }
 
     }

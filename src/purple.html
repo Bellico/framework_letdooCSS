@@ -8,12 +8,13 @@
   <body>
     <header class="header purple">
       <div class="container">
-        <div class="title-large">Chrome Dev  Test</div>
-        <div class="title-sm sub-title">Connecting you with Chrome Engineers</div>
+        <div class="title-large center">Chrome Dev  Test</div>
+         <div class="title-sm center">Connecting you with Chrome Engineers</div>
+        <div class="title-sm sub-title center">Connecting you with Chrome Engineers</div>
         <p>Lorem ipsum dolor sit amet, consectetur ad</p>
       </div>
     </header>
-    <div id="content" style="background:red;width: 200px;height: 200px;"></div>
+    <div id="content" style="background:red;width: 200px;height: 200px;position : relative; left:0"></div>
     <footer class="footer purple">
     <ul class="collection-inline">
       <li class="item">Termt</li>
@@ -24,41 +25,30 @@
 
     <script type="text/javascript">
 
-    var tidyUpAnimations = function (){
-      console.log("tidyUpAnimations");
-    };
+    var d = document.querySelector('#content');
 
+    //d.style.transition = "left 0.7s linear";
+    //d.style.left = "calc(100% - 200px)";
 
-    var el = document.querySelector('#content');
+   /* d.addEventListener('transitionend', function(){
+      d.style.left = (d.style.left === "0px") ? "calc(100% - 200px)" : 0;
+    });*/
 
-    var first = el.getBoundingClientRect();
+    var left = 0;
+    var down = false;
+    setInterval(function(){
+      d.style.left = left;
+      if (left >= 1000) down = true;
+      if (left == 0) down = false;
 
-    // Now set the element to the last position.
-    el.classList.add('totes-at-the-end');
+      if(down) left --; else left ++;
+    }, 2);
 
-    // Read again. This forces a sync layout, so be careful.
-    var last = el.getBoundingClientRect();
-
-    // You can do this for other computed styles as well, if needed.
-    // Just be sure to stick to compositor-only props like transform
-    // and opacity where possible.
-    var invert = first.top - last.top;
-
-    // Invert.
-    el.style.transform = 'translateY(' + invert + 'px)';
-
-    // Wait for the next frame so we know all the style changes have taken hold.
-    requestAnimationFrame(function() {
-
-      // Switch on animations.
-      el.classList.add('animate-on-transforms');
-
-      // GO GO GOOOOOO!
-      el.style.transform = '';
+    requestAnimationFrame(function(e){
+      console.log(e);
     });
 
-    // Capture the end with transitionend
-    el.addEventListener('transitionend', tidyUpAnimations);
+
 
 
     </script>

@@ -1,5 +1,5 @@
 .content-page{
-   //background: map-get($color-theme, "default");
+   //background-color: map-get($theme, "background");
    //color : map-get($color-theme, "font");
 }
 
@@ -13,6 +13,6 @@
 
 .section-change{
   section:nth-child(odd){
-    background: map-get($theme, "darkenBackground");
+    background-color: map-get($theme, "lightenBackground");
   }
 }

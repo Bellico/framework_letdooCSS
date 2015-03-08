@@ -1,17 +1,19 @@
 $default-theme : (
-  'font' : #2F322D,
+  'font' : #2c3e50,
+  'font2': #b0babf,
   'background' : #F5F5F5,
   'darkenBackground': shade(#F5F5F5, 5%),
-  'lightenBackground': tint(#F5F5F5, 5%),
+  'lightenBackground': #FFF,
   'headerColor' : #F5F5F5 ,
   'headerBackground': #1f1f1f,
   'footerColor' : #F5F5F5,
-  'footerBackground': #1f1f1f,
+  'footerBackground': #2D3235,
   'navbarColor' : #F5F5F5,
   'navbarBackground': #29333B,
   'tableTheme': ''
 );
-
+//tint(#F5F5F5, 80%),
+//#2F322D //#7f8c8d
 $theme : $default-theme;
 
 $colors : (
@@ -34,6 +36,9 @@ body{
   font-size: 1.09em;
   letter-spacing: 1px;
 
-  // perspective: 1px;
+  // @include perspective(1px);
   // transform-style: preserve-3d;
+  // height: 100%;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
 }

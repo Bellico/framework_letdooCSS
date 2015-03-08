@@ -1,15 +1,15 @@
 .header, .footer, .content-page{
-  padding: 1.5em 0;
+  padding: 5.5em 0;
 }
 
 .header{
   color: map-get($theme, "headerColor");
-  background: map-get($theme, "headerBackground");
+  background-color: map-get($theme, "headerBackground");
 }
 
 .footer{
   color: map-get($theme, "footerColor");
-  background: map-get($theme, "footerBackground");
+  background-color: map-get($theme, "footerBackground");
 }
 
 .header.fix{
@@ -18,4 +18,5 @@
 
 header.full{
   height: 100%;
+  box-sizing: border-box;
 }
